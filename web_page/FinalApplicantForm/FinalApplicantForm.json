@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "FinalApplicantForm",
   "name" : "FinalApplicantForm",
-  "lastUpdate" : 1601619921253,
+  "lastUpdate" : 1601628669616,
   "rows" : [
     [
       {
@@ -340,8 +340,8 @@
                           "value" : ""
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
+                          "type" : "expression",
+                          "value" : "!batchMap.batchId"
                         },
                         "disabled" : {
                           "type" : "constant",
@@ -570,8 +570,8 @@
                             },
                             "propertyValues" : {
                               "hidden" : {
-                                "type" : "constant",
-                                "value" : false
+                                "type" : "expression",
+                                "value" : "!curSem[$index].semester"
                               },
                               "cssClasses" : {
                                 "type" : "constant",
