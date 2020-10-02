@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "FinalApplicantForm",
   "name" : "FinalApplicantForm",
-  "lastUpdate" : 1600768472089,
+  "lastUpdate" : 1601619921253,
   "rows" : [
     [
       {
@@ -286,7 +286,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -349,7 +349,7 @@
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
@@ -520,7 +520,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "labelHidden" : {
                                 "type" : "constant",
@@ -599,7 +599,7 @@
                               },
                               "required" : {
                                 "type" : "constant",
-                                "value" : false
+                                "value" : true
                               },
                               "labelHidden" : {
                                 "type" : "constant",
