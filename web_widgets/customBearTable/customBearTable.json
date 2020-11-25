@@ -3,7 +3,7 @@
   "previousDesignerVersion" : "1.2.9",
   "id" : "customBearTable",
   "name" : "BearTable",
-  "lastUpdate" : 1602820558182,
+  "lastUpdate" : 1602829398359,
   "template" : "@customBearTable.tpl.html",
   "controller" : "@customBearTable.ctrl.js",
   "description" : "Display a table, with rich control. Via the header, different mechanism can be controlled:\n* sort the column, yes or no\n* filter the column, yes or no\n* type of the control for the record : input, text, select, link, button",

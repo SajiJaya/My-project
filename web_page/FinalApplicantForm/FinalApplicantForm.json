@@ -2,7 +2,7 @@
   "designerVersion" : "1.10.54",
   "id" : "FinalApplicantForm",
   "name" : "FinalApplicantForm",
-  "lastUpdate" : 1601628669616,
+  "lastUpdate" : 1606280621091,
   "rows" : [
     [
       {
@@ -10,7 +10,20 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
         "reference" : "91238537-02cc-4375-8e2e-a742977223a3",
         "hasValidationError" : false,
         "id" : "pbContainer",
@@ -69,62 +82,6 @@
               "reference" : "ee4921b3-07e9-4a3f-822b-98c4a9c05fd6",
               "hasValidationError" : false,
               "id" : "pbTitle"
-            }
-          ],
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "xs" : 12
-              },
-              "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "labelHidden" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "widgetId" : {
-                  "type" : "constant",
-                  "value" : "pbText"
-                },
-                "readOnly" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "label" : {
-                  "type" : "interpolation"
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "left"
-                },
-                "class" : {
-                  "type" : "constant",
-                  "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.TextWidget"
-                },
-                "dimension" : {
-                  "type" : "constant",
-                  "value" : 12
-                }
-              },
-              "reference" : "97ec5948-4ee0-4793-b5d5-a61de0585866",
-              "hasValidationError" : false,
-              "id" : "pbText"
             }
           ]
         ]

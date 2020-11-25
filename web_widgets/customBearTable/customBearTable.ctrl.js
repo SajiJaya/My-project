@@ -67,7 +67,7 @@ function BearTable ($scope, $filter) {
     //---------
 	// Return the InitValue
 	this.getWSelectDateLongInitValue = function(header, valueDate) {
-		console.log( "getWSelectDateLongInitValue: Header["+header+"] Value="+JSON.stringify(valueDate)+"]");
+		// console.log( "getWSelectDateLongInitValue: Header["+header+"] Value="+JSON.stringify(valueDate)+"]");
 		if (! this.isHeaderDate( header ))
 			return valueDate;
 	
@@ -77,7 +77,7 @@ function BearTable ($scope, $filter) {
 		if (isNaN(valueDate) && isFinite(valueDate))
 			return null;
 		
-		console.log( "getWSelectDateLongInitValue: valueDate["+JSON.stringify(valueDate)+"]");
+		// console.log( "getWSelectDateLongInitValue: valueDate["+JSON.stringify(valueDate)+"]");
 		var dateObject=null;
 		try
 		{
@@ -117,7 +117,7 @@ function BearTable ($scope, $filter) {
 	    {
 			// 
 			if (header.name === 'assigned_to')
-				console.log("########################### Wiged Bar : getWSelectDisplayFromItem= "+ JSON.stringify( optionItem ));
+				this.logBear(false, "########################### Wiged Bar : getWSelectDisplayFromItem= "+ JSON.stringify( optionItem ));
 
             if (header.listoptiondisplay===null)
             {
@@ -783,7 +783,7 @@ function BearTable ($scope, $filter) {
 		{
 			// setup the pagination to the first range
 			var stepsPagination= this.getStepsPagination();
-			console.log(" calculate recorditemsperpage from "+angular.toJson( stepsPagination) );
+			// console.log(" calculate recorditemsperpage from "+angular.toJson( stepsPagination) );
 			this.recorditemsperpage= stepsPagination[0].value;
 			this.logBear(false, "PrepareData : setup the pagination to the first Range ["+this.recorditemsperpage+"]");
 		}
@@ -837,8 +837,8 @@ function BearTable ($scope, $filter) {
 			this.logBearHeader(header,false, "prepareData/manager headerControlSelect value["+angular.toJson( oneRecord[ header.name]) +"] found selected:"+angular.toJson( selected)+" List "+angular.toJson( listOptionsItem) );
 			
 			
-			console.log( "prepareData/manager headerControlSelect ["+header.name+"] value["+oneRecord[ header.name]+"] found selected:"+angular.toJson( selected)+" List "+angular.toJson( listOptionsItem) );
-			console.log("  header.listoptionsvariable="+header.listoptionsvariable+" list="+angular.toJson( $scope.properties.dynamicLists ));
+			//console.log( "prepareData/manager headerControlSelect ["+header.name+"] value["+oneRecord[ header.name]+"] found selected:"+angular.toJson( selected)+" List "+angular.toJson( listOptionsItem) );
+			//console.log("  header.listoptionsvariable="+header.listoptionsvariable+" list="+angular.toJson( $scope.properties.dynamicLists ));
 			  
 			oneRecord[ header.name+'_select' ] = selected;						
 		}
@@ -874,7 +874,7 @@ function BearTable ($scope, $filter) {
 	// ------------------- pagination 
 	this.isShowPagination = function() {
 		var showPagination = this.getStepsPagination() != null;
-		console.log("isShowPagination :"+showPagination);
+		//console.log("isShowPagination :"+showPagination);
 	    return showPagination;
 	}
 	
@@ -882,9 +882,12 @@ function BearTable ($scope, $filter) {
 		var stepsPagination=$scope.properties.pagination;
 		
 		// console.log("getPagination : start");
-		if ($scope.properties.pagination == null || typeof $scope.properties.pagination === 'undefined')
+		if (stepsPagination == null || typeof stepsPagination === 'undefined')
 			return null;
 
+        if (stepsPagination[ 0 ] == null || typeof stepsPagination[ 0 ]== 'undefined')
+        	return null;
+        	
 		// if the user give a constante (so a String) with the JSON, let's give a chance to translate it to a real Array
 		var step0 = stepsPagination[0].value;
 		// console.log("getPagination : stepsPagination="+angular.toJson(stepsPagination));
@@ -938,8 +941,8 @@ function BearTable ($scope, $filter) {
 		    this.endTime(timeBegin, "getRecordsPage - no Headers");
             return null;
 	    }
-	    console.log("===== getRecordsPage : ="+ $scope.properties.value);
-		console.log("getRecordsPage : ="+ angular.toJson($scope.properties.value,true));
+	    //console.log("===== getRecordsPage : ="+ $scope.properties.value);
+		//console.log("getRecordsPage : ="+ angular.toJson($scope.properties.value,true));
 	    //console.log("getRecordsPage : Orderby:"+this.orderByField+" - direction : "+this.reverseSort);
 	    var listOrdered = [];
 	    for (var i=0; i<$scope.properties.value.length; i++){
@@ -1016,14 +1019,14 @@ function BearTable ($scope, $filter) {
 			}
 		}
 		  
-		console.log(' listrecordsFlat='+angular.toJson(this.listrecordsFlat));
+		//console.log(' listrecordsFlat='+angular.toJson(this.listrecordsFlat));
 	    if (this.isShowPagination() )
 	    {
 			// be sure this is not a String
 			this.recorditemsperpage = parseInt( this.recorditemsperpage);
 		    var begin = ((this.recordpagenumber - 1) * this.recorditemsperpage);
 		    var end =  begin + this.recorditemsperpage;
-	        console.log("Result After Filter begin/end="+begin+"/"+end+":"+ angular.toJson(this.listFlat , true));
+	        //console.log("Result After Filter begin/end="+begin+"/"+end+":"+ angular.toJson(this.listFlat , true));
 			this.endTime(timeBegin, "getRecordsPage - ShowPagination from begin["+begin+"] to end["+end+"] recorditemsperpage=["+this.recorditemsperpage+"] nblines["+this.listrecordsFlat.length+"]");
 
     		return this.listrecordsFlat.slice(begin, end);

@@ -35,7 +35,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_6Xm5LsAbEeqXm-Rs8tSjKg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_6Xm5L8AbEeqXm-Rs8tSjKg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_z-8k6s13EeqU8bJv6QagLw">
-            <targetForm xmi:type="expression:Expression" xmi:id="_ykdR8M15EeqU8bJv6QagLw" name="newForm17" content="d8dc4a8e-4ddc-4249-9276-cc3d158d9245" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_ykdR8M15EeqU8bJv6QagLw" name="testBearTable" content="59f4c0be-04a7-4fe8-8a83-98bfa7147e3b" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_z-8k6c13EeqU8bJv6QagLw">
             <inputs xmi:type="process:ContractInput" xmi:id="_j0VFgM15EeqU8bJv6QagLw" name="testInput" type="COMPLEX" dataReference="test">

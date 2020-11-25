@@ -167,7 +167,7 @@
                 <expression xmi:type="expression:Expression" xmi:id="_lNLtgcEFEeqYXduhBjO2zw" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lNLtgsEFEeqYXduhBjO2zw" key="to">
-                <expression xmi:type="expression:Expression" xmi:id="_lNLtg8EFEeqYXduhBjO2zw" name="course.auto.reg.std2@gmail.com" content="course.auto.reg.std2@gmail.com" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lNLtg8EFEeqYXduhBjO2zw" name="auto.course.reg@gmail.com" content="auto.course.reg@gmail.com" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lNLthMEFEeqYXduhBjO2zw" key="bcc">
                 <expression xmi:type="expression:Expression" xmi:id="_lNLthcEFEeqYXduhBjO2zw" content="" returnTypeFixed="true"/>
@@ -182,10 +182,10 @@
                 <expression xmi:type="expression:Expression" xmi:id="_lNMUgcEFEeqYXduhBjO2zw" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lNMUgsEFEeqYXduhBjO2zw" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_lNMUg8EFEeqYXduhBjO2zw" name="&lt;pattern-expression>" content="Dear Student,&#xA;&lt;br/>&lt;br/>Please find the comments from HOD&#xA;&#xA;&lt;br/>&lt;br/>Comment from Head of the Department: ${comment_HOD}" type="TYPE_PATTERN" returnTypeFixed="true">
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_fvnO0Mv4Eeqdtr1arJ1hng" name="comment_HOD" content="comment_HOD" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_fvnO0cv4Eeqdtr1arJ1hng" name="comment_HOD" content="comment_HOD" type="TYPE_VARIABLE">
-                      <referencedElements xmi:type="process:Data" xmi:id="_fvnO0sv4Eeqdtr1arJ1hng" name="comment_HOD" dataType="_ozEEk2cHEeeXUPrCIbH-9A"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lNMUg8EFEeqYXduhBjO2zw" name="&lt;pattern-expression>" content="Dear Student,&#xA;&lt;br/>&lt;br/>Unfortunately, we will not be moving forward with your application. Please find the comments from HOD&#xA;&#xA;&lt;br/>&lt;br/>Comment from Head of the Department: ${comment_HOD}" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_WIHvoC7eEeujI4uesg_Q0g" name="comment_HOD" content="comment_HOD" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_WIHvoS7eEeujI4uesg_Q0g" name="comment_HOD" content="comment_HOD" type="TYPE_VARIABLE">
+                      <referencedElements xmi:type="process:Data" xmi:id="_WIHvoi7eEeujI4uesg_Q0g" name="comment_HOD" dataType="_ozEEk2cHEeeXUPrCIbH-9A"/>
                     </referencedElements>
                   </referencedElements>
                 </expression>
@@ -261,9 +261,12 @@
                 <expression xmi:type="expression:Expression" xmi:id="_WOrHmMGZEeqgos_qDVt1sQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_WOrHmcGZEeqgos_qDVt1sQ" key="message">
-                <expression xmi:type="expression:Expression" xmi:id="_WOrHmsGZEeqgos_qDVt1sQ" name="message()" content="def message = &quot;&lt;p>Dear Student,&lt;br/>&lt;br/>Congratulation.! Your application is accepted &lt;br/>&lt;br/>Comment from HOD: &quot; + comment_HOD +&quot;&lt;/p>&quot;&#xD;&#xA;&#xD;&#xA;message += &quot;&lt;p>&lt;a href =\&quot;http://localhost:8080/bonita/API/form/mapping?c=10&amp;p=0&amp;f=processDefinitionId=&quot;+processInstanceId+&quot;&amp;f=type=PROCESS_OVERVIEW\&quot;>Please click to edit&quot; + processInstanceId + &quot;your response&lt;/p>&quot;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;return  message" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_q3SVwPgJEeq-174HaQ9kyA" name="comment_HOD" dataType="_ozEEk2cHEeeXUPrCIbH-9A"/>
-                  <referencedElements xmi:type="expression:Expression" xmi:id="_q3S80PgJEeq-174HaQ9kyA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+                <expression xmi:type="expression:Expression" xmi:id="_WOrHmsGZEeqgos_qDVt1sQ" name="&lt;pattern-expression>" content="Dear Student,&#xD;&#xA;&lt;br/>&lt;br/>Congratulation..! You have been selected to follow the course. &#xD;&#xA;&#xD;&#xA;&lt;br/>&lt;br/>Comment from Head of the Department: ${comment_HOD}" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_CJalgC7eEeujI4uesg_Q0g" name="comment_HOD" content="comment_HOD" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_CJalgS7eEeujI4uesg_Q0g" name="comment_HOD" content="comment_HOD" type="TYPE_VARIABLE">
+                      <referencedElements xmi:type="process:Data" xmi:id="_CJalgi7eEeujI4uesg_Q0g" name="comment_HOD" dataType="_ozEEk2cHEeeXUPrCIbH-9A"/>
+                    </referencedElements>
+                  </referencedElements>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_WOrHm8GZEeqgos_qDVt1sQ" key="headers">
